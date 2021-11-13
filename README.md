@@ -1,7 +1,9 @@
 # Grupo de estudos R - para Epidemiologia e Bioestatística
 
 :hospital: É um profissional de saúde e tem dificuldade com análise de dados? 
+
 :stuck_out_tongue_closed_eyes: Está cansado de usar a versão pirata desses softwares estatísticos muito caros? 
+
 :disappointed_relieved: Só consegue realizar suas análises no computador do trabalho ou da universidade?
 
 :boom: Seus problemas acabaram!
