@@ -8,7 +8,7 @@
 library(summarytools)
 library(descr)
 library(reshape2)
-library(ggplot2)
+library(tidyverse)
 
 # Estatísticas descritivas: variáveis e apresentação de dados
 
@@ -152,7 +152,37 @@ gra04 +
   
 ### Gráfico de setores - variável qualitativa, em especial nominal
 
-library(RColorBrewer)
-colors <- brewer.pal(5, "Set2") 
+gra5 = data.frame(table(exemplo$estado_civil))
 
-pie(exemplo$estado_civil, labels = exemplo$estado_civil, border = "white", col = colors)
+gra5 = gra5 %>% 
+  arrange(desc(Var1)) %>%
+  mutate(prop = Freq/sum(gra5$Freq)*100) %>%
+  mutate(ypos = cumsum(prop) - 0.5*prop)
+
+ggplot(gra5, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0)
+
+ggplot(gra5, aes(x="", y=prop, fill=Var1)) +
+  geom_bar(stat="identity", width=1, color="white") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  #theme(legend.position="none") +
+  geom_text(aes(y = ypos, label = Freq), color = "white", size=6) +
+  scale_fill_brewer(palette="Set2") + guides(fill=guide_legend(title="Estado Civil"))+
+  ggtitle("Proporção de mulheres por estado cívil")
+
+### Histograma - variável quantitativa contínua
+
+gra6 = data.frame(peso = runif(100, 50, 120))
+gra6 = ggplot(gra6, aes(x= peso))
+
+hist(gra6$data$peso, freq = T, border = "white", col = "grey", breaks = 7,
+     xlab = "Peso",
+     ylab = "Frequência",
+     main = "Histograma")
+
+gra6+
+  geom_histogram(bins = 7, colour = "white")+
+  xlab("Peso")+ylab("Contagem")+
+  ggtitle("Histograma")
