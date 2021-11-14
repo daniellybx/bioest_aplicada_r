@@ -131,22 +131,28 @@ gra03+
   theme_bw()+ geom_text(aes(label = n), vjust = -0.2)+
   scale_y_continuous(breaks=seq(0, 15, 1))
 
-### Gráfico de linhas - útil para descrever dados de uma variável contínua, em especial séries temporais
+### Gráfico de linhas - variável contínua, em especial séries temporais
 
 tempo = data.frame(
-  se = 1:54,
-  taxa = runif(54, 0, 1000)
+  mes = 1:12,
+  taxa = c(20.6, 88.7, 237.9, 311.8, 162.0, 26.8, 13.7, 4.2, 3.2, 2.4, 4.5, 8.3)
 )
 
-gra04 = ggplot(tempo, aes(x = se, y = taxa))
+gra04 = ggplot(tempo, aes(x = mes, y = taxa))
 
 gra04 + 
-  geom_line(size = 0.9, colour = "blue")+
+  geom_line(colour = "blue")+
   #geom_point(size = 2, colour = "darkblue")+
   theme_light() +
-  ggtitle("Taxa de incidência por semana epidemiológica")+
-  xlab("Semana epidemiológica")+ylab("Taxa de incidência")+
-  scale_x_continuous(breaks=seq(0, 55, 5))+
-  scale_y_continuous(breaks=seq(0, 1000, 100))+
+  ggtitle("Taxa de incidência de dengue notificados em SP, 2010")+
+  xlab("Mês")+ylab("Taxa de incidência")+
+  scale_x_continuous(breaks=seq(0, 12, 1))+
+  scale_y_continuous(breaks=seq(0, 450.0, 50.0))+
   theme_bw()
   
+### Gráfico de setores - variável qualitativa, em especial nominal
+
+library(RColorBrewer)
+colors <- brewer.pal(5, "Set2") 
+
+pie(exemplo$estado_civil, labels = exemplo$estado_civil, border = "white", col = colors)
