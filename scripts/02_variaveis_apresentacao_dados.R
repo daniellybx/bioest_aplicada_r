@@ -25,12 +25,6 @@ disc2 = as.integer(c(8, 9, 10))
 class(disc1)
 class(disc2)
 
-10 %/% 3 #resultados inteiros de uma divisão
-3 %/% 2
-
-10 %% 3 #quociente da divisão
-3 %% 2 
-
 #### Para declarar um valor contínuo no R 
 cont1 = 8.9
 cont2 = as.numeric(100.8)
@@ -225,4 +219,3 @@ gra08+geom_point(size = 2, colour = "darkgreen") +
   ggtitle("Gráfico antes e depois de intervenção")+
   xlab("Intervenção") + ylab("Valores")+
   theme_bw()
-
