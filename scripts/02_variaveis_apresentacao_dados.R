@@ -4,11 +4,13 @@
 #install.packages("summarytools")
 #install.packages("reshape2")
 #install.packages("tidyverse")
+#install.packages("GGally")
 
 library(summarytools)
 library(descr)
 library(reshape2)
 library(tidyverse)
+library(GGally)
 
 # Estatísticas descritivas: variáveis e apresentação de dados
 
@@ -152,18 +154,18 @@ gra04 +
   
 ### Gráfico de setores - variável qualitativa, em especial nominal
 
-gra5 = data.frame(table(exemplo$estado_civil))
+gra05 = data.frame(table(exemplo$estado_civil))
 
-gra5 = gra5 %>% 
+gra05 = gra05 %>% 
   arrange(desc(Var1)) %>%
-  mutate(prop = Freq/sum(gra5$Freq)*100) %>%
+  mutate(prop = Freq/sum(gra05$Freq)*100) %>%
   mutate(ypos = cumsum(prop) - 0.5*prop)
 
-ggplot(gra5, aes(x="", y=Freq, fill=Var1)) +
+ggplot(gra05, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0)
 
-ggplot(gra5, aes(x="", y=prop, fill=Var1)) +
+ggplot(gra05, aes(x="", y=prop, fill=Var1)) +
   geom_bar(stat="identity", width=1, color="white") +
   coord_polar("y", start=0) +
   theme_void() + 
@@ -174,15 +176,53 @@ ggplot(gra5, aes(x="", y=prop, fill=Var1)) +
 
 ### Histograma - variável quantitativa contínua
 
-gra6 = data.frame(peso = runif(100, 50, 120))
-gra6 = ggplot(gra6, aes(x= peso))
+gra06 = data.frame(peso = runif(100, 50, 120))
+gra06 = ggplot(gra06, aes(x= peso))
 
-hist(gra6$data$peso, freq = T, border = "white", col = "grey", breaks = 7,
+hist(gra06$data$peso, freq = T, border = "white", col = "grey", breaks = 7,
      xlab = "Peso",
      ylab = "Frequência",
      main = "Histograma")
 
-gra6+
+gra06+
   geom_histogram(bins = 7, colour = "white")+
   xlab("Peso")+ylab("Contagem")+
   ggtitle("Histograma")
+
+### Polígono de frequências - variável quantitativa contínua
+
+gra07 = data.frame(
+  idade = 0:13,  
+  peso_medio = sort(runif(14, 0.5, 50.0)))
+gra07 = ggplot(gra07, aes(x = idade, y = peso_medio))
+
+gra07+
+  geom_area( fill="#581845", alpha=0.4) +
+  geom_line(color="#581845", size=2) +
+  geom_point(size=3, color="#581845") +
+  theme_bw() +
+  ggtitle("Peso médio em relação à idade")+
+  xlab("Idade") + ylab("Peso médio")
+  scale_x_continuous(breaks=seq(0, 13, 1))
+  
+### Gráfico "antes e depois" 
+  
+gra08 = data.frame(
+  id = 1:12,
+  antes = sort(runif(12, 0.9, 2.0)),
+  depois = sort(runif(12, 0.7, 2.2))
+  )
+
+gra08 <- gra08 %>% 
+  pivot_longer(2:3,names_to = "Teste") %>% 
+  mutate(Teste = as.factor(Teste))
+
+gra08 = ggplot(gra08, aes(x = Teste, y = value, group = id))
+
+gra08+geom_point(size = 2, colour = "darkgreen") + 
+  geom_line(size = 0.9) + 
+  scale_y_continuous(breaks=seq(0, 2, 0.1))+
+  ggtitle("Gráfico antes e depois de intervenção")+
+  xlab("Intervenção") + ylab("Valores")+
+  theme_bw()
+
