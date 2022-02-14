@@ -14,4 +14,4 @@ O R é uma linguagem de programação de código aberto, voltada para a análise
 
 Nosso grupo se reúne todas as quartas, às 20h. 
 
-Para entrar, envie um e-mail para danielly.xavier@outlook.com.
+Para entrar, envie um e-mail para daniellyb.xavier@icloud.com.
