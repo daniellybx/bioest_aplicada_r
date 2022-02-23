@@ -8,10 +8,4 @@
 
 :boom: Seus problemas acabaram!
 
-Venha participar de nosso grupo de estudos em R! 
-Somos um grupo de epidemiologistas com a missão de propagar o uso do R para a área da saúde. 
-O R é uma linguagem de programação de código aberto, voltada para a análise estatística de dados. 
-
-Nosso grupo se reúne todas as quartas, às 20h. 
-
-Para entrar, envie um e-mail para daniellyb.xavier@icloud.com.
+Esse é um repositório com aplicações de bioestatística em R. Os scripts foram criados com base em cada um dos capítulos do livro "Bioestatistica para os cursos de graduação da área da saúde" de Edson Martinez. 
