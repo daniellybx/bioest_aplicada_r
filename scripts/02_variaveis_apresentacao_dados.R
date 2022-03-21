@@ -91,7 +91,7 @@ gmodels::CrossTable(exemplo$tabagista, exemplo$estado_saude)
 mx <- matrix(1:16, ncol = 2, nrow = 8)
 
 rownames(mx) <- c("M", "F", "1-10", "11-20", "21-30", "31-40", "41-50", "50+")
-colnames(mx) <- c("Frequencia", "%")
+colnames(mx) <- c("Faixa etaria", "%")
 
 #### Formatando a tabela em html com subgrupos em linhas
 htmlTable(mx,
@@ -244,9 +244,9 @@ gra08 <- gra08 %>%
 
 gra08 = ggplot(gra08, aes(x = Teste, y = value, group = id))
 
-gra08+geom_point(size = 2, colour = "darkgreen") + 
+gra08+geom_point(size = 2, colour = "#974526") + 
   geom_line(size = 0.9) + 
   scale_y_continuous(breaks=seq(0, 2, 0.1))+
   ggtitle("Gráfico antes e depois de intervenção")+
   xlab("Intervenção") + ylab("Valores")+
-  theme_bw()
+  theme_test()
