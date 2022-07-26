@@ -197,7 +197,7 @@ ggplot(gra05, aes(x="", y=prop, fill=Var1)) +
   #theme(legend.position="none") +
   geom_text(aes(y = ypos, label = Freq), color = "white", size=6) +
   scale_fill_brewer(palette="Set2") + guides(fill=guide_legend(title="Estado Civil"))+
-  ggtitle("Proporção de mulheres por estado cívil")
+  ggtitle("Proporção de mulheres por estado civil")
 
 ### Histograma - variável quantitativa contínua
 
