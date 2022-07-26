@@ -250,3 +250,33 @@ gra08+geom_point(size = 2, colour = "#974526") +
   ggtitle("Gráfico antes e depois de intervenção")+
   xlab("Intervenção") + ylab("Valores")+
   theme_test()
+
+### Gráficos para variáveis categóricas ordinais
+exemplo$estado_saude = factor(exemplo$estado_saude, levels = c("bom", "regular", "ruim"))
+
+gra09 = data.frame(table(exemplo$estado_saude))
+colnames(gra09) = c("estado_saude", "n")
+
+gra10 = ggplot(gra09, aes(x = estado_saude, y = n))
+
+gra09 = ggplot(gra09, aes(x = estado_saude, y = n))
+
+gra09+
+  geom_bar(stat = "identity", fill = "darkblue")+ 
+  xlab("Estado de saúde")+ylab("Frequência")+
+  theme_classic()+ geom_text(aes(label = n), vjust = -0.2)+
+  scale_y_continuous(breaks=seq(0, 15, 1))
+
+gra10+
+  geom_bar(stat = "identity", fill = "darkblue")+ 
+  xlab("Estado de saúde")+ylab("Frequência")+
+  theme_classic()+ geom_text(aes(label = n), hjust = -1)+
+  scale_y_continuous(breaks=seq(0, 20, 1)) + coord_flip() +
+  scale_x_discrete(limits = rev(levels(exemplo$estado_saude)))
+
+gra10+
+  geom_segment(aes(x = estado_saude, xend = estado_saude, y = 0, yend = n))+
+  geom_point(size=5, color="orange", fill=alpha("red", 0.3), alpha=0.7, shape=21, stroke=2)+
+  xlab("Estado de saúde")+ylab("Frequencia")+
+  theme_bw() + coord_flip() +
+  scale_x_discrete(limits = rev(levels(exemplo$estado_saude)))
