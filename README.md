@@ -15,7 +15,7 @@ Esse é um repositório com aplicações de bioestatística em R. Os scripts for
 - R 
 - RStudio
 
-## Colabore com nosso repositório
+## Estude com esse repositório
 ````
 git clone https://github.com/daniellybx/bioest_aplicada_r.git
 ````
