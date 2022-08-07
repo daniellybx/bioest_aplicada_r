@@ -1,4 +1,4 @@
-# Grupo de estudos R - para Epidemiologia e Bioestatística
+# Bioestatística aplicada com R
 
 :hospital: É um profissional de saúde e tem dificuldade com análise de dados? 
 
@@ -9,3 +9,13 @@
 :boom: Seus problemas acabaram!
 
 Esse é um repositório com aplicações de bioestatística em R. Os scripts foram criados com base em cada um dos capítulos do livro "Bioestatistica para os cursos de graduação da área da saúde" de Edson Martinez. 
+
+## Ferramentas usadas
+
+- R 
+- RStudio
+
+## Estude com esse repositório
+````
+git clone https://github.com/daniellybx/bioest_aplicada_r.git
+````
