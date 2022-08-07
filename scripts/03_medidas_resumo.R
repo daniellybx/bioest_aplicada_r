@@ -4,15 +4,11 @@
 #install.packages("summarytools")
 #install.packages("reshape2")
 #install.packages("tidyverse")
-#install.packages("htmlTable")
-#install.packages("beeswarm")
 
 library(summarytools)
 library(descr)
 library(reshape2)
 library(tidyverse)
-library(htmlTable)
-library(beeswarm)
 
 #Estatística descritiva: medidas-resumo
 
