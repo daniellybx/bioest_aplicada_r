@@ -10,6 +10,13 @@
 
 Esse é um repositório com aplicações de bioestatística em R. Os scripts foram criados com base em cada um dos capítulos do livro "Bioestatistica para os cursos de graduação da área da saúde" de Edson Martinez. 
 
+## Temas dos encontros
+
+1. Bioestatística e estudos em saúde (slide disponível [aqui](https://www.canva.com/design/DAEvnrGEUiw/QL1W2AvR4bj69mQbdU8F6Q/edit?utm_content=DAEvnrGEUiw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+2. Estatística descritiva: variáveis e apresentação de dados (script 02)
+3. Estatística descritiva: medidas resumo (script 03)
+4. Correlação (script 04)
+
 ## Índice do respositório
 
 ### Pastas
@@ -21,13 +28,6 @@ Esse é um repositório com aplicações de bioestatística em R. Os scripts for
 - LICENCE: arquivo de licença pública do repositório
 - README.md: documento de referência do repositório
 - grupo_estudos_r.Rproj: arquivo *R project* para uso do repositório no *RStudio*
-
-## Temas dos encontros
-
-1. Bioestatística e estudos em saúde (slide disponível [aqui](https://www.canva.com/design/DAEvnrGEUiw/QL1W2AvR4bj69mQbdU8F6Q/edit?utm_content=DAEvnrGEUiw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
-2. Estatística descritiva: variáveis e apresentação de dados (script 02)
-3. Estatística descritiva: medidas resumo (script 03)
-4. Correlação (script 04)
 
 ## Ferramentas usadas
 
