@@ -13,7 +13,7 @@ Esse é um repositório com aplicações de bioestatística em R. Os scripts for
 ## Índice do respositório
 
 ### Pastas
-- scripts: inclui todos os scripts separados por tema do encontro a partir do encontro 2. 
+- scripts: inclui todos os scripts separados por tema do encontro a partir do encontro 2
 
 ## Temas dos encontros
 
