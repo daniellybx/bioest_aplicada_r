@@ -10,6 +10,11 @@
 
 Esse é um repositório com aplicações de bioestatística em R. Os scripts foram criados com base em cada um dos capítulos do livro "Bioestatistica para os cursos de graduação da área da saúde" de Edson Martinez. 
 
+## Índice do respositório
+
+### Pastas
+- scripts: inclui todos os scripts separados por tema do encontro a partir do encontro 2. 
+
 ## Temas dos encontros
 
 1. Bioestatística e estudos em saúde (slide disponível [aqui](https://www.canva.com/design/DAEvnrGEUiw/QL1W2AvR4bj69mQbdU8F6Q/edit?utm_content=DAEvnrGEUiw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
