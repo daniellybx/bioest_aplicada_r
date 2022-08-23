@@ -20,10 +20,7 @@ library(htmlTable)
 
 #### Para declarar um valor como inteiro no r, você deve usar a função as.integer
 disc1 = as.integer(8)
-disc2 = as.integer(c(8, 9, 10))
-
-class(disc1)
-class(disc2)
+disc2 = as.integer(c(8, 9, 10))class(disc2)
 
 #### Para declarar um valor contínuo no R 
 cont1 = 8.9

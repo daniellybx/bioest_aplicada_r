@@ -4,11 +4,13 @@
 #install.packages("summarytools")
 #install.packages("reshape2")
 #install.packages("tidyverse")
+#install.packages("beeswarm")
 
 library(summarytools)
 library(descr)
 library(reshape2)
 library(tidyverse)
+library(beeswarm)
 
 #Estatística descritiva: medidas-resumo
 
@@ -161,7 +163,7 @@ p_alt_m = p_alt*0.01
 p_mean_m = mean(p_alt_m)
 p_mean*0.01 #transformando em metro
 
-p_sd_cm = sd(p_alt_cm) #valores na escala de metros
+p_sd_m = sd(p_alt_m) #valores na escala de metros
 p_sd*0.01 #transformando em metros
 
 ##Outras medidas-resumo importantes
@@ -228,7 +230,7 @@ stripchart(altura ~ classe,
            add = TRUE)   
 
 ###gráfico de valores individuais
-####alternativas ao boxplot quando se tem poucar observações 
+####alternativas ao boxplot quando se tem poucas observações 
 atletas = data.frame(
   pais = c(rep("Alemanha", 5), rep("Brasil", 5), rep("Canadá", 5), rep("Dinamarca", 5)),
   altura = rnorm(160, 1.70, 0.15)

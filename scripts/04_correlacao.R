@@ -34,7 +34,7 @@ gra01 +
 
 ####calculando a covariância: o quanto duas variáveis "variam conjuntamente"
 #####Pode ser calculado com diferentes unidades de medida
-#####Coariância = 0 -> não há aumento ou descréscimo em uma variável com base no aumento ou decréssimo da outra
+#####Covariância = 0 -> não há aumento ou descréscimo em uma variável com base no aumento ou decréssimo da outra
 cov(trig$idade, trig$nivser_trig)
 
 ####calculando coeficiente de correlação de Pearson
@@ -148,5 +148,5 @@ gra06 +
 ####correlação de Pearson
 cor(atend$hora, atend$atendimentos, method = "pearson")
 
-####calculando coeficiente de correlação de Pearson
+####calculando coeficiente de correlação de Spearman
 cor(atend$hora, atend$atendimentos, method = "spearman")
