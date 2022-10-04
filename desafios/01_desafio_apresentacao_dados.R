@@ -15,7 +15,7 @@ library(htmlTable)
 
 # Estatísticas descritivas: variáveis e apresentação de dados
 
-# Nesse desafio, você deverá usar o que aprendeu no encontro sobre apresentação de dados. Para responder as questões a seguir
+# Nesse desafio, você deverá usar o que aprendeu no encontro sobre apresentação de dados
 # Para isso, você deverá importar os dados do SIH registrados no DF em dezembro de 2020
 
 sih = read_csv("dados/sih_df_dezembro_2020.csv")
