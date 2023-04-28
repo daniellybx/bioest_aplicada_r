@@ -117,15 +117,14 @@ length(d)/length(amostra) #probabilidade de encontrar um número 8 na amostra - 
 
 ##Diagrama de Venn e cálculos de probabilidade
 
-###Comunidade = 20% dos índivídus adultos são hipertensos, 40% são diabéticos e 15% são hipertensos e diabéticos
+### Comunidade = 20% dos índivídus adultos são hipertensos, 40% são diabéticos e 15% são hipertensos e diabéticos
 
 ### - D: indivíduo escolhido é portador de diabetes
 ### - H: indivíduo escolhido é portador de hipertensão
 ### Intersecção de D e H é portador de diabetes e hipertensão
 
-
 grid.newpage()
-draw.pairwise.venn(area1=40, area2=20, cross.area=0.15,
+draw.pairwise.venn(area1=0.40, area2=0.20, cross.area=0.15,
                    category=c("Diabéticos","Hipertensos"),
                    fill=c("Red","Yellow"))
 

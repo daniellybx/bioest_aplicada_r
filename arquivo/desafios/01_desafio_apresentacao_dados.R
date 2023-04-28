@@ -85,6 +85,6 @@ hist(
   xlab = "Idade",
   ylab = "Internações",
   main = "Histograma de idades por internação, DF, dezembro de 2020",
-  breaks = 20,
+  breaks = 10,
   col = "darkgreen", border = "white")
 

@@ -43,7 +43,7 @@ cv_perm = round((sd(sih_mais18$DIAS_PERM)/mean(sih_mais18$DIAS_PERM))*100, 2)
 cv_perm/cv_idade
 cv_idade/cv_perm
 
-## Calcule o intervalo interquartílico da idade de homens e mulheres
+## 05 - Calcule o intervalo interquartílico da idade de homens e mulheres
 
 h = subset(sih, sih$SEXO == "MASCULINO")
 IQR(h$DIAS_PERM)
